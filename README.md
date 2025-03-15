@@ -1,35 +1,17 @@
 # 🍕 pizza.shop API
 
-Food delivery app (aka. iFood/Uber Eats) back-end built with TypeScript, Drizzle a ElysiaJS.
+Aplicativo de entrega de comida (também conhecido como iFood/Uber Eats) back-end construído com TypeScript, Drizzle e ElysiaJS.
 
-> 🔥 This project aims to keep runtime agnostic, this means it should work on Bun, Node, Cloudflare Workers or any Web Standard API compatible runtime.
+## Executando
 
-## Running
+O Docker para configurar o banco de dados. Com o Docker instalado, clone o projeto, instale as dependências, configure os contêineres Docker e execute a aplicação.
 
-This project depends on Docker to setup database. With Docker installed, clone the project, install  dependencies, setup Docker containers and run the application.
+O Docker sobe o projeto, o banco de dados, faz as migrates, popula o banco de dados com "seed" e roda o projeto.
 
-> You must also run migrations to create database tables and run the seed to populate the database with fake data.
+Basta Executar:
 
 ```sh
-bun i
 docker compose up -d
-bun migrate
-bun seed
-bun dev
 ```
 
-## Features
-
-> The **summary** of the features are listed below. All the features contains E2E tests.
-
-- it should be able to register a new restaurant
-- it should be able to sign in as a restaurant manager
-- it should be able to register as a new customer
-- it should be able to crete an order to the restaurant
-- it should be able to manage the restaurant menu
-- it should be able to manage the restaurant evaluations
-- it should be able to leave an evaluation
-- it should be able to manage the restaurant orders
-- it should be able to update the restaurant public profile
-- it should be able to open/close the restaurant
-- it should be able to list metrics from the restaurant
+#### Nao esquecer de trocar o seu email no arquivo seed.ts
