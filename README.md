@@ -4,7 +4,7 @@ Aplicativo de entrega de comida (também conhecido como iFood/Uber Eats) back-en
 
 ## Executando
 
-O Docker para configurar o banco de dados. Com o Docker instalado, clone o projeto, instale as dependências, configure os contêineres Docker e execute a aplicação.
+Com o Docker instalado, clone o projeto.
 
 O Docker sobe o projeto, o banco de dados, faz as migrates, popula o banco de dados com "seed" e roda o projeto.
 
