@@ -1,0 +1,27 @@
+version: '3.7'
+
+services:
+  postgres:
+    image: bitnami/postgresql:latest
+    ports:
+      - '5433:5432'
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=pizzashopdocker
+    volumes:
+      - postgres_data:/bitnami/postgresql
+
+  bun:
+    build: .
+    ports:
+      - '3334:3334'
+    volumes:
+      - .:/app
+    environment:
+      - DATABASE_URL=postgres://docker:docker@postgres:5432/pizzashop
+    depends_on:
+      - postgres
+
+volumes:
+  postgres_data:
